@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Black-Scholes Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Black-Scholes Plot Configuration</h1>
+        <form method="post" action="/generate_plot">
+            <div class="form-group">
+                <label for="parameter">Parameter to Vary:</label>
+                <select class="form-control" id="parameter" name="parameter">
+                    <option value="S">Stock Price (S)</option>
+                    <option value="K">Strike Price (K)</option>
+                    <option value="T">Time to Maturity (T)</option>
+                    <option value="r">Risk-Free Rate (r)</option>
+                    <option value="sigma">Volatility (σ)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="S_fixed">Fixed Stock Price (S) if not varied:</label>
+                <input type="text" class="form-control" id="S_fixed" name="S_fixed">
+            </div>
+            <div class="form-group">
+                <label for="K_fixed">Fixed Strike Price (K) if not varied:</label>
+                <input type="text" class="form-control" id="K_fixed" name="K_fixed">
+            </div>
+            <div class="form-group">
+                <label for="T_fixed">Fixed Time to Maturity (T) if not varied:</label>
+                <input type="text" class="form-control" id="T_fixed" name="T_fixed">
+            </div>
+            <div class="form-group">
+                <label for="r_fixed">Fixed Risk-Free Rate (r) if not varied:</label>
+                <input type="text" class="form-control" id="r_fixed" name="r_fixed">
+            </div>
+            <div class="form-group">
+                <label for="sigma_fixed">Fixed Volatility (σ) if not varied:</label>
+                <input type="text" class="form-control" id="sigma_fixed" name="sigma_fixed">
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Plot</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
